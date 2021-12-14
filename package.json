@@ -9,8 +9,7 @@
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "jwt-decode": "^3.1.2",
@@ -26,6 +25,7 @@
     "react-textarea-autosize": "^8.3.2",
     "react-toastify": "^7.0.3",
     "react-transition-group": "^4.4.1",
+    "serve": "^13.0.2",
     "socket.io-client": "^4.0.1"
   },
   "devDependencies": {
