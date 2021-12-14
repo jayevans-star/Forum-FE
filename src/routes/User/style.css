@@ -1,0 +1,110 @@
+/* Profile */
+.profile_head {
+  display: flex;
+  align-items: initial;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.profile_picture {
+  width: 100px;
+  height: 100px;
+  color: var(--actions-color);
+  background-color: var(--secondary-bg-tint);
+  position: relative;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  user-select: none;
+}
+.profile_picture::before {
+  content: '';
+  border-radius: 50%;
+  border: 2px solid rgb(0 0 0 / 5%);
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.profile_head_right {
+  margin: .5rem .5rem 1rem 1.5rem;
+  overflow: hidden;
+}
+.profile_username {
+  display: flex;
+  align-items: center;
+  margin: .5rem 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile_online {
+  color: var(--actions-color);
+}
+.profile_head_actions {
+  display: flex;
+  align-items: center;
+}
+.profile_head_actions .btn:not(:first-child) {
+  margin-left: .5rem;
+}
+@media (max-width: 500px) {
+  .profile_head {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile_head_right {
+    margin: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile_username {
+    max-width: 280px;
+  }
+}
+
+.profile_stats_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.profile_stats_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: var(--border-radius-inner);
+  transition: var(--transition-background);
+  min-width: 76px;
+  height: 72px;
+  user-select: none;
+}
+.profile_stats_item:hover {
+  background-color: var(--secondary-bg-tint-focus);
+}
+.profile_stats_item:not(:first-child)::before {
+  content: '';
+  border-left: 1px solid var(--form-border-color);
+  transition: border-left .2s;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+.profile_stats_item .secondary_text {
+  margin: 0 0 .3rem;
+  font-size: 1.1rem;
+}
+
+.positive {
+  color: var(--main-success-color);
+}
+.negative {
+  color: var(--main-danger-color);
+}

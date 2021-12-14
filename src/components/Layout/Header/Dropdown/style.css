@@ -1,0 +1,98 @@
+/* Dropdown Menu */
+.head_dropdown {
+  position: absolute;
+  top: 48px;
+  right: -2px;
+  width: 250px;
+  max-height: calc(100vh - 100px) !important;
+  font-size: .95rem;
+  background-color: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px -3px rgb(0 0 0 / 20%);
+  padding: .4rem;
+  overflow: hidden;
+  transition-duration: .2s;
+  transition-property: height, background-color;
+  pointer-events: initial !important;
+  cursor: default;
+  user-select: none;
+  z-index: 8;
+}
+
+.menu {
+  width: 100%;
+}
+.drop-header {
+  margin-bottom: 10px;
+}
+.menu-item {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-inner);
+  transition: var(--transition-background);
+  padding: .3rem;
+  cursor: pointer;
+}
+.menu-item .icon-button i {
+  font-size: 20px;
+}
+.icon-button i.bx-left-arrow-alt {
+  font-size: 24px;
+}
+.menu-item:hover {
+  background-color: var(--secondary-bg-tint-focus);
+}
+.menu-item-title {
+  margin-left: .5rem;
+}
+.icon-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: .1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-right {
+  margin-left: auto;
+  margin-right: .5rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-right i {
+  font-size: 20px !important;
+}
+
+/* CSSTransition  */
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all .3s;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all .3s;
+}
+
+.menu-secondary-enter {
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all .3s;
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all .3s;
+}

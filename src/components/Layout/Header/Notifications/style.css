@@ -1,0 +1,16 @@
+/* Notifications dropdown */
+.with_notifications {
+  width: 380px;
+  max-width: 600px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media (max-width: 400px) {
+  .with_notifications {
+    right: -68px;
+    width: 100vw;
+    max-width: initial !important;
+    max-height: calc(100vh - 66px) !important;
+  }
+}

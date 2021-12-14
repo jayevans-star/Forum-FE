@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#161616" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Forum" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="icon" href="%PUBLIC_URL%/icons/ic-192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/icons/ic-512.png" />
+    <title>Forum</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('load', async () => {
+        if ('serviceWorker' in navigator) {
+          try {
+            await navigator.serviceWorker.register('%PUBLIC_URL%/sw.js')
+          } catch(err) {
+            console.error(err.message)
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
